@@ -29,6 +29,9 @@ Breakdowns: by model, by month, top projects (by `cwd`), by client (CLI vs Deskt
 ## Install
 
 ```sh
+uv tool install git+https://github.com/ryseek/codex-monitor    # from GitHub
+
+# or from a local clone:
 cd codex-monitor
 uv tool install --editable .    # editable: edits to the source apply immediately
 # or a frozen copy: uv tool install .

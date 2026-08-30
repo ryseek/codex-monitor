@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codex-monitor"
+version = "0.1.0"
+description = "Aggregate Codex CLI/Desktop token usage from local rollout files and estimate API-equivalent cost."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["codex", "token-usage", "cost"]
+license = "MIT"
+
+[project.scripts]
+codex-monitor = "codex_monitor.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codex_monitor"]

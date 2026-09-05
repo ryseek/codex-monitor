@@ -62,7 +62,7 @@ codex-monitor --json               # machine-readable output
 
 ## Prices
 
-Built-in `PRICE_TABLE` is the public OpenAI API rate card (Aug 2026), USD per 1M
+Built-in `PRICE_TABLE` is the public OpenAI API rate card (Sep 2026), USD per 1M
 tokens (`in` / `cached` / `out`). Unknown models are priced at `DEFAULT_PRICE`
 (gpt-5.6-sol rates) and flagged with `*` in the output.
 
@@ -81,6 +81,8 @@ codex-monitor --prices prices.json
 
 ## Caveats
 
+- `gpt-6-astra` bills 2x input/cached and 1.5x output for requests over 272K
+  input tokens; the price table uses standard rates and ignores this surcharge.
 - ChatGPT-plan usage is credit-based; the `$` figures are **API-equivalent, not billed**.
 - `codex-auto-review` and `gpt-5.3-codex-spark` have no published rate card and
   reuse the gpt-5.3-codex rates — verify if this matters.

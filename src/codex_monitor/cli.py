@@ -17,7 +17,7 @@ Usage:
     codex-monitor --prices my.json --top 20
     codex-monitor --json               # machine-readable output
 
-Prices are USD per 1M tokens (public API rate card, Aug 2026). Override with a
+Prices are USD per 1M tokens (public API rate card, Sep 2026). Override with a
 JSON file: {"model": {"in": 5.0, "cached": 0.5, "out": 30.0}}.
 Unknown models price at DEFAULT_PRICE and are flagged with *.
 """
@@ -31,6 +31,7 @@ from collections import defaultdict
 
 # USD per 1M tokens: input / cached-read / output
 PRICE_TABLE = {
+    "gpt-6-astra":        {"in": 10.00, "cached": 1.00,  "out": 50.00},
     "gpt-5.6-sol":        {"in": 5.00,  "cached": 0.50,  "out": 30.00},
     "gpt-5.6-terra":      {"in": 2.00,  "cached": 0.20,  "out": 12.00},
     "gpt-5.6-luna":       {"in": 0.20,  "cached": 0.02,  "out": 1.20},
